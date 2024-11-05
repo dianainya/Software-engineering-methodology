@@ -1,0 +1,18 @@
+title InmatePointsManagement
+
+participant "Аналитик" as Analyst
+participant "Система" as System
+
+Analyst->System: Заполнение формы о действиях заключенного
+System->Analyst: Подтверждение заполнения формы
+System->Admin: Уведомление об изменениях в баллах заключенного
+Admin->System: Подтверждение обновления баллов
+Admin->Analyst: Уведомление об успешном обновлении
+
+Analyst->System: Просмотр балльно-рейтинговой системы
+System->Analyst: Отображение рейтинга заключенного
+
+Analyst->System: Увеличение баллов заключенному за хорошее поведение
+System->Analyst: Подтверждение успешного изменения баллов
+
+note over System: Баллы заключенных обновлены в системе.

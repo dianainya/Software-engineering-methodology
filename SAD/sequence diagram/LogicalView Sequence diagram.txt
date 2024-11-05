@@ -1,0 +1,35 @@
+title InmatePointsManagement
+
+participant "Аналитик" as Analyst
+participant "Controller" as AnalystController
+participant "Service" as AnalystService
+participant "Repository" as InmateRepository
+participant "Model" as Inmate
+participant "Администратор" as Admin
+participant "Система" as System
+
+Analyst->AnalystController: Заполнение формы о действиях заключенного
+AnalystController->AnalystService: Обработка формы (данные о действиях)
+AnalystService->InmateRepository: Найти заключенного по ID
+InmateRepository->Inmate: Получить данные о заключенном
+Inmate->InmateRepository: Вернуть данные заключенного
+InmateRepository->AnalystService: Возврат заключенного
+
+AnalystService->Inmate: Обновить баллы заключенного (за нарушение или хорошее поведение)
+Inmate->AnalystService: Подтверждение обновления баллов
+
+AnalystService->InmateRepository: Сохранить обновлённые данные заключенного
+InmateRepository->AnalystService: Подтверждение сохранения
+
+AnalystService->AnalystController: Вернуть обновлённые данные
+AnalystController->Analyst: Подтверждение успешного обновления баллов
+
+Analyst->AnalystController: Просмотр балльно-рейтинговой системы
+AnalystController->AnalystService: Запрос на получение рейтинговой системы
+AnalystService->InmateRepository: Запрос данных всех заключенных
+InmateRepository->AnalystService: Возврат списка заключенных
+AnalystService->AnalystController: Передать данные рейтинговой системы
+AnalystController->Analyst: Отображение рейтинговой системы
+
+Admin->System: Подтверждение изменений
+note over System: Баллы заключенных обновлены в системе.

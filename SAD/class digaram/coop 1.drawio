@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="z_f5lyd8a4vgs68372aC">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-15" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="N_wVz_nI1mVMk9mGgruk-2" target="N_wVz_nI1mVMk9mGgruk-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="N_wVz_nI1mVMk9mGgruk-2" target="N_wVz_nI1mVMk9mGgruk-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-2" value="заключенный" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="248" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-11" value=": Menu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334" y="252" width="86" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-12" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="200" as="sourcePoint" />
+            <mxPoint x="310" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-13" value="1: Просмотр меню" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="N_wVz_nI1mVMk9mGgruk-12">
+          <mxGeometry x="-0.4174" y="-4" relative="1" as="geometry">
+            <mxPoint x="14" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="240" as="sourcePoint" />
+            <mxPoint x="180" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-17" value="2: Отображние меню" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="N_wVz_nI1mVMk9mGgruk-16">
+          <mxGeometry x="-0.4174" y="-4" relative="1" as="geometry">
+            <mxPoint x="-32" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-18" value=": Блюдо" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334" y="440" width="80" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-21" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="350" as="sourcePoint" />
+            <mxPoint x="310" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-22" value="3: Выбор блюда" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="N_wVz_nI1mVMk9mGgruk-21">
+          <mxGeometry x="-0.4174" y="-4" relative="1" as="geometry">
+            <mxPoint x="14" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-23" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="410" as="sourcePoint" />
+            <mxPoint x="180" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-24" value="3.2: Отображение блюда" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="N_wVz_nI1mVMk9mGgruk-23">
+          <mxGeometry x="-0.4174" y="-4" relative="1" as="geometry">
+            <mxPoint x="-32" y="24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-26" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="380" as="sourcePoint" />
+            <mxPoint x="310" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N_wVz_nI1mVMk9mGgruk-27" value="3.1: Просмотр блюда" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="N_wVz_nI1mVMk9mGgruk-26">
+          <mxGeometry x="-0.4174" y="-4" relative="1" as="geometry">
+            <mxPoint x="14" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,35 @@
+title Управление баллами заключенных - Spring MVC (Полное описание)
+
+participant "Аналитик" as Analyst
+participant "BarsController" as Controller
+participant "Barservice" as Service
+participant "BarsRepository" as Repository
+participant "Bars" as Bars
+participant "Database" as Database
+
+Analyst->Controller: POST /Bars/{id}/updatePoints (BarsActionDTO action)
+Controller->Service: updateBarsPoints(action, BarsId)
+Service->Repository: findById(BarsId)
+Repository->Database: SELECT * FROM Bars WHERE id = BarsId
+Database->Repository: Возвращает данные заключенного (Bars)
+Repository->Service: Заключенный найден (Bars object)
+
+alt Нарушение
+    Service->Service: calculatePenaltyPoints(Bars, action)
+    note right: Расчет уменьшения баллов за нарушение
+else Хорошее поведение
+    Service->Service: calculateRewardPoints(Bars, action)
+    note right: Расчет увеличения баллов за хорошее поведение
+end
+
+Service->Bars: setPoints(newPoints)
+note right: Обновление баллов заключенного
+
+Service->Repository: save(Bars)
+Repository->Database: UPDATE Bars SET points = newPoints WHERE id = BarsId
+Database->Repository: Подтверждение обновления
+Repository->Service: Заключенный обновлен
+Service->Controller: Баллы заключенного успешно обновлены
+Controller->Analyst: HTTP 200 OK, данные обновлены
+
+note over Analyst, Controller: Баллы заключенного обновлены в системе
