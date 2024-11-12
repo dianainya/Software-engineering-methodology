@@ -1,9 +1,72 @@
+### 1. Тестирование схемы БД
+
+
+
+[Исходники](https://github.com/dianainya/Software-engineering-methodology/tree/main/test/sql-scripts)
+
+Пример теста (test1.sql):
+
+```sql
+
+-- Test 1: Проверка уникальности пользователей в platform_user
+BEGIN;
+
+INSERT INTO platform_user (username, password, activated)
+VALUES ('db_test_user', 'password', true);
+
+DO
+$$
+    DECLARE
+conflict boolean := false;
+BEGIN
+BEGIN
+INSERT INTO platform_user (username, password, activated)
+VALUES ('db_test_user', 'password', true);
+EXCEPTION
+            WHEN unique_violation THEN
+                conflict := true;
+END;
+        IF conflict THEN
+            RAISE NOTICE 'Test 1 - Username uniqueness constraint: OK';
+ELSE
+            RAISE NOTICE 'Test 1 - Username uniqueness constraint: FAILED';
+END IF;
+END
+$$;
+
+DELETE FROM platform_user WHERE username = 'db_test_user';
+COMMIT;
+
+```
+Скрипт для запуска:
+
+```bash
+#!/bin/bash
+
+DIRECTORY="${1:-.}"
+
+find "$DIRECTORY" -type f -name "*.sql" | while read -r file; do
+    echo "Executing $file..."
+    psql -U s283945 -f "$file"
+    if [ $? -ne 0 ]; then
+        echo "Error executing $file"
+        exit 1
+    else
+        echo "$file executed successfully."
+    fi
+done
+
+```
+
+Рузьтаты:
+![img.png](resources/res_db.png)
+
 ### 2.  Function Testing (Функциональное тестирование)
 
 **Technique Objective:** Обеспечение корректности моделирования бизнес-цикла, сохранение инвариантов, полная и точная реализация требований
 
 **Technique (Описание процесса):**
-Использовать для подробностей документы SRS UC
+Использовать для подробностей документы SRS, UC
 1. Создать заключенного в системе и залогиниться
 2. Пройти основной поток юзкейса InmatePointsManagement 
 3. Убедиться, что платформа распределила заключенных согласно рейтингу
@@ -69,4 +132,4 @@
     }
 ```
 Результаты:
-![img.png](resources/img.png)
+![img.png](resources/res_intr.png)
