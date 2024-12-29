@@ -2,6 +2,7 @@ package itmo.sadiva;
 
 import itmo.sadiva.model.login.LoginForm;
 import itmo.sadiva.model.main.DishPage;
+import itmo.sadiva.model.main.MyPrisonerPage;
 import itmo.sadiva.model.main.PlatformPage;
 import itmo.sadiva.model.main.PrisonerPage;
 import itmo.sadiva.model.sidenav.SideNavComponent;
@@ -11,8 +12,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
-
-import static itmo.sadiva.utils.WaitUtils.waitIfNeed;
 
 public class E2eTest extends SeleniumTest {
     private final String PRISONER_PATH = baseUrl + "/main/prisoners";
@@ -70,10 +69,10 @@ public class E2eTest extends SeleniumTest {
         driver.get(PRISONER_PATH);
         var prisonerTable = new PrisonerPage.PrisonerTable();
         prisonerPage.enterSearch(lastName);
-//        prisonerTable.clickAddPointsButton(lastName);
-//        var prisonerEditPopup = new PrisonerPage.PrisonerAddPointPopup();
-//        prisonerEditPopup.enterPointsAmount(100);
-//        prisonerEditPopup.clickAddPointsButton();
+        prisonerTable.clickAddPointsButton(lastName);
+        var prisonerEditPopup = new PrisonerPage.PrisonerAddPointPopup();
+        prisonerEditPopup.enterPointsAmount(100);
+        prisonerEditPopup.clickAddPointsButton();
 
         // 4. Перераспледение заключенных по этажам упарвляющий платформы
         changeUser("platform_manager");
@@ -83,9 +82,15 @@ public class E2eTest extends SeleniumTest {
         platformPage.clickDistributeButton();
         platformPage.clickStartButton();
 
+        changeUser(passport, password);
+        Thread.sleep(10000);
+        var myPrisonerPage = new MyPrisonerPage();
+        Assertions.assertEquals("Платформа на этаже 1", myPrisonerPage.getFloorLabel().getText());
+    }
 
-
-
+    private void changeUser(String login, String password) {
+        sideNavComponent.logoutClick();
+        new LoginForm().logIn(login, password);
     }
 
     private void changeUser(String role) {

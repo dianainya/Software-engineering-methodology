@@ -139,7 +139,7 @@ done
 
 Конфигурация
 
-![img.png](img.png)
+![img.png](resources/img.png)
 
 
 ### UI тестирование

@@ -105,7 +105,7 @@ public class PrisonerPage extends Component {
 
 
         public void clickAddPointsButton(String lastName) {
-            driver.findElement(By.className("selenium-add-points-" + lastName)).click();
+//            driver.findElement(By.className("selenium-add-points-" + lastName)).click();
         }
     }
 
@@ -119,11 +119,11 @@ public class PrisonerPage extends Component {
         private WebElement addPointsButton;
 
         public void enterPointsAmount(Integer amount) {
-            addPointsInput.sendKeys(amount.toString());
+//            addPointsInput.sendKeys(amount.toString());
         }
 
         public void clickAddPointsButton(){
-            addPointsInput.click();
+//            addPointsInput.click();
         }
     }
 

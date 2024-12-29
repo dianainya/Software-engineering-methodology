@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a25416aa-d61e-4c0a-bf0c-46b42c74a749" name="Changes" comment="test selenium">
+      <change afterPath="$PROJECT_DIR$/test/jmx/Тест план. Нагрузочное и стресс тестирование" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/img3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/test/Report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/img_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/jmx/Test Plan.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/matrix.md" beforeDir="false" afterPath="$PROJECT_DIR$/test/matrix.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/selenium-auto-test/src/main/java/itmo/sadiva/model/main/MyPrisonerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/selenium-auto-test/src/main/java/itmo/sadiva/model/main/MyPrisonerPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/selenium-auto-test/src/main/java/itmo/sadiva/model/main/PrisonerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/selenium-auto-test/src/main/java/itmo/sadiva/model/main/PrisonerPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/selenium-auto-test/src/test/java/itmo/sadiva/E2eTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/selenium-auto-test/src/test/java/itmo/sadiva/E2eTest.java" afterDir="false" />
     </list>
     <list id="b4951e21-1e26-4940-82b5-c2d4f5c131dc" name="re" comment="re" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +61,10 @@
       <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test\sql-scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test\resources" />
+      <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test\stress_test" />
       <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test" />
       <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test\jmx" />
-      <recent name="C:\Users\Diana\Desktop\staff\Software-engineering-methodology\test\resources" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +100,7 @@
       <workItem from="1734969657937" duration="596000" />
       <workItem from="1735008012426" duration="282000" />
       <workItem from="1735010683890" duration="1408000" />
-      <workItem from="1735479911442" duration="2247000" />
+      <workItem from="1735479911442" duration="5262000" />
     </task>
     <task id="LOCAL-00001" summary="Тест план функц тест">
       <option name="closed" value="true" />
@@ -137,7 +150,31 @@
       <option name="project" value="LOCAL" />
       <updated>1735490690263</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test selenium">
+      <option name="closed" value="true" />
+      <created>1735497698389</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735497698389</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test selenium">
+      <option name="closed" value="true" />
+      <created>1735497716202</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735497716202</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test selenium">
+      <option name="closed" value="true" />
+      <created>1735497724085</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735497724085</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
