@@ -18,6 +18,11 @@ import java.util.List;
 public class DishPage extends Component {
 
     public WebElement getAddNewDishButton(String dishName) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         List<WebElement> dishes = driver.findElements(By.className("selenium-selector-add-dish"));
 
         for (WebElement dish : dishes) {

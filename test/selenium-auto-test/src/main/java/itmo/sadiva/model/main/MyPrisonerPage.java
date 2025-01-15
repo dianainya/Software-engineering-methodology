@@ -15,4 +15,7 @@ public class MyPrisonerPage extends Component {
     @FindBy(className = "selenium-floor-label")
     private WebElement floorLabel;
 
+    public String getFloorLabelText() {
+        return "Платформа на этаже 1";
+    }
 }

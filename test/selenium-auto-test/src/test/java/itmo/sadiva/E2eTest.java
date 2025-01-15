@@ -25,7 +25,7 @@ public class E2eTest extends SeleniumTest {
     }
 
     @Test
-    public void businessLogicTest() throws InterruptedException {
+    public void businessLogicTest() {
         driver.get(PRISONER_PATH);
         sideNavComponent = new SideNavComponent();
 
@@ -83,9 +83,8 @@ public class E2eTest extends SeleniumTest {
         platformPage.clickStartButton();
 
         changeUser(passport, password);
-        Thread.sleep(10000);
         var myPrisonerPage = new MyPrisonerPage();
-        Assertions.assertEquals("Платформа на этаже 1", myPrisonerPage.getFloorLabel().getText());
+        Assertions.assertEquals("Платформа на этаже 1", myPrisonerPage.getFloorLabelText());
     }
 
     private void changeUser(String login, String password) {
